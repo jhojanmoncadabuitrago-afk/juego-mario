@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* CONTENEDOR DEL JUEGO */
+#game{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    background:#6495ED; /* azul cielo */
+}
+
+/* MENSAJE SUPERIOR */
+.mensaje{
+    position:absolute;
+    top:35px;
+    width:100%;
+    text-align:center;
+    color:white;
+    text-shadow:2px 2px 4px rgba(0,0,0,.8);
+    z-index:100;
+}
+
+.mensaje h2{
+    font-size:32px;
+}
+
+.mensaje p{
+    font-size:22px;
+}
+
+/* SUELO */
+#ground{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:120px;
+    background:#F2B37A;
+    border-top:6px solid #000;
+}
+
+/* JUGADOR */
+#player{
+    position:absolute;
+    width:45px;
+    height:45px;
+    background:#E85D04;
+    border:3px solid #000;
+    border-radius:4px;
+
+    left:80px;
+    bottom:120px;
+
+    z-index:10;
+}
+
+/* OBSTÁCULO */
+#obstacle{
+    position:absolute;
+    width:30px;
+    height:70px;
+
+    background:#000;
+
+    bottom:120px;
+    right:-50px;
+
+    animation:mover 2s linear infinite;
+}
+
+/* ANIMACIÓN DEL OBSTÁCULO */
+@keyframes mover{
+    from{
+        right:-50px;
+    }
+
+    to{
+        right:100%;
+    }
+}
+
+/* SALTO */
+.jump{
+    animation:saltar .6s ease;
+}
+
+@keyframes saltar{
+
+    0%{
+        bottom:120px;
+    }
+
+    50%{
+        bottom:260px;
+    }
+
+    100%{
+        bottom:120px;
+    }
+player{
+    position:absolute;
+    width:45px;
+    height:45px;
+    background:#E85D04;
+    border:3px solid black;
+    border-radius:4px;
+
+    left:80px;      /* posición fija */
+    bottom:120px;   /* encima del suelo */
+
+    z-index:10;
+}
+}
